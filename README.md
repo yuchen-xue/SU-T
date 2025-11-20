@@ -1,4 +1,4 @@
-# When Trackers Date Fish: A Benchmark and Framework for Underwater Multiple Fish Tracking
+# When Trackers Date Fish: A Benchmark and Framework for Underwater Multiple Fish Tracking [AAAI26 Oral]
 
 The official implementation of the paper：
 >  [**When Trackers Date Fish: A Benchmark and Framework for Underwater Multiple Fish Tracking**](https://vranlee.github.io/SU-T/)  
@@ -16,6 +16,7 @@ The official implementation of the paper：
 -----
 
 ## 📌Updates
++ [2025.11] Our paper has been accepted for the AAAI2026 (Oral).
 + [2025.07] Paper released to arXiv.
 + [2025.07] Fixed bugs.
 + [2025.04] We have released the MFT25 dataset and codes of SU-T!

@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "uv venv && uv pip install -r requirements.txt && uv pip install --no-build-isolation -e ."
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "rm -rf .venv"
+        },
+        {
+            "label": "train",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/python tools/train.py -f exps/SU-T.py -d 1 -b 48 --fp16 -o -c pretrained/Checkpoint.pth.tar"
+        },
+        {
+            "label": "train-reid",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/python tools/train.py -f exps/SU-T-ReID.py -d 1 -b 48 --fp16 -c pretrained/Checkpoint.pth.tar"
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/python tools/su_tracker.py -f exps/SU-T.py -b 1 -d 1 --fp16 --fuse -c pretrained/Checkpoint.pth.tar --expn pretrained"
+        },
+        {
+            "label": "test-reid",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/python tools/su_tracker.py -f exps/SU-T-ReID.py -b 1 -d 1 --fp16 --fuse -c pretrained/Checkpoint.pth.tar --expn pretrained"
+        }
+    ]
+}

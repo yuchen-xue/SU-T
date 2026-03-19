@@ -15,8 +15,8 @@ class Exp(MyExp):
         self.depth = 1.33
         self.width = 1.25
         self.exp_name = os.path.split(os.path.realpath(__file__))[1].split(".")[0]
-        self.train_ann = "train.json"
-        self.val_ann = "test.json"
+        self.train_ann = "train_half.json"
+        self.val_ann = "val_half.json"
         self.input_size = (800, 1440)
         self.test_size = (800, 1440)
         self.random_size = (18, 32)
@@ -30,7 +30,7 @@ class Exp(MyExp):
         self.warmup_epochs = 1
 
         # tracking params
-        self.ckpt = "Checkpoint.pth.tar"
+        self.ckpt = "pretrained/Checkpoint.pth.tar"
         self.use_byte = True
         self.dataset = "mft25"
         self.inertia = 0.05
@@ -46,7 +46,7 @@ class Exp(MyExp):
         self.EG_weight_low_score= 1.2
 
         self.fast_reid_config = "fast_reid/configs/SBS_S101.yml"
-        self.fast_reid_weights = "ReID-Checkpoint.pth"
+        self.fast_reid_weights = "pretrained/ReID-Checkpoint.pth"
 
         self.with_longterm_reid_correction = True
         self.longterm_reid_correction_thresh = 0.4
@@ -121,7 +121,7 @@ class Exp(MyExp):
             data_dir=os.path.join(get_yolox_datadir(), "mft25"),
             json_file=self.val_ann,
             img_size=self.test_size,
-            name='test',
+            name='',
             preproc=ValTransform(
                 rgb_means=(0.485, 0.456, 0.406),
                 std=(0.229, 0.224, 0.225),

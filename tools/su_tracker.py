@@ -7,7 +7,7 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 from yolox.core import launch
 from yolox.exp import get_exp
 from yolox.utils import configure_nccl, fuse_model, get_local_rank, get_model_info, setup_logger
-from yolox.evaluators import MOTEvaluatorDance as MOTEvaluator
+from yolox.evaluators import MOTEvaluator
 
 from utils.args import make_parser, args_merge_params_form_exp
 import os

@@ -632,7 +632,7 @@ class MOTEvaluator:
                     video_names[video_id] = video_name
 
                 if frame_id == 1:
-                    tracker = su_t(args, det_thresh=self.args.track_thresh, iou_threshold=self.args.iou_thresh,
+                    tracker = SU_T(args, det_thresh=self.args.track_thresh, iou_threshold=self.args.iou_thresh,
                                      asso_func=self.args.asso, delta_t=self.args.deltat, inertia=self.args.inertia,
                                      use_byte=self.args.use_byte)
                     if len(results) != 0:

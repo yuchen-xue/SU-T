@@ -1,2 +1,13 @@
 .DS_Store
 index.html
+
+# Build
+build
+*.egg-info
+**/__pycache__
+**.so
+
+# Workspace
+datasets
+pretrained
+YOLOX_outputs

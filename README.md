@@ -67,9 +67,10 @@ Multiple object tracking (MOT) technology has made significant progress in terre
    SU-T/
    ├── pretrained/
    │   └── Checkpoint.pth.tar
-   ├── MFT25/
-   │   ├── train/
-   │   └── test/
+   ├── datasets/
+   │   ├── mft25/
+   │   └── annotations/
+   │   └── BT-001/
    └── ...
    ```
 

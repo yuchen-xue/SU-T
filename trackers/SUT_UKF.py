@@ -4,7 +4,7 @@
 from __future__ import print_function
 
 import numpy as np
-from .association import *
+from .association import iou_batch, giou_batch, diou_batch, ciou_batch, ct_dist, hmiou, fish_iou_batch, associate_4_points, associate_4_points_with_score, associate_kitti
 
 
 def k_previous_obs(observations, cur_age, k):
